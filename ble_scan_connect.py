@@ -36,7 +36,7 @@ for dev in devices:
     n += 1
     for (adtype, desc, value) in dev.getScanData():
         print (" %s = %s" % (desc, value))
-        if value == Henry:
+        if value == "Henry":
             k = n-1
 
 
