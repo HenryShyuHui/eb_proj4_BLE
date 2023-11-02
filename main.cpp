@@ -17,10 +17,11 @@
 #include <events/mbed_events.h>
 #include "ble/BLE.h"
 #include "ble/gap/Gap.h"
-#include "ble/services/HeartRateService.h"
+#include "ble/services/HeartRateService_modified.h"
 #include "ble/services/EnvironmentalService.h"
 #include "pretty_printer.h"
 #include "mbed-trace/mbed_trace.h"
+#include "ble/Gap.h"
 
 #include "stm32l475e_iot01_tsensor.h"
 #include "stm32l475e_iot01_hsensor.h"
@@ -32,7 +33,7 @@
 using namespace std::literals::chrono_literals;
 
 // const static char DEVICE_NAME[] = "Heartrate";
-const static char DEVICE_NAME[] = "EnJhih";
+const static char DEVICE_NAME[] = "Henry";
 
 static events::EventQueue event_queue(/* event count */ 16 * EVENTS_EVENT_SIZE);
 
