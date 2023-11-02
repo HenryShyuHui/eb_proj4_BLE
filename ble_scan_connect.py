@@ -27,6 +27,7 @@ scanner = Scanner().withDelegate(ScanDelegate())
 devices = scanner.scan(10.0)
 
 n=0
+k=-1
 addr = []
 
 for dev in devices:
@@ -35,10 +36,12 @@ for dev in devices:
     n += 1
     for (adtype, desc, value) in dev.getScanData():
         print (" %s = %s" % (desc, value))
+        if value == Henry:
+            k = n-1
 
 
-if dev.addr == 'Henry' :
-    print ('Henry device name' , n)
+if k != -1 :
+    print ('Henry device name' , k)
 
 number = input('Enter your device number: ')
 print ('Device', number)
